@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reshponsive wesaid </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            
+        }
+        .container{
+            /* border: 2px solid red; */
+            display:flex;
+            justify-content: space-between;
+            position: fixed;
+            height: 80px;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            background-color: rgb(12, 12, 73);
+            color: white;
+        }
+        .logo{
+            /* border: 2px solid red; */
+            display: flex;
+            /* justify-content: space-evenly; */
+            font-size: 25px;
+            position: relative;
+            font-weight: 900;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 5px;
+            line-height: 1.5;
+            
+            
+        }
+        .logo i{
+            /* border: 2px solid red; */
+            margin-top:0.3rem;
+            font-size: 25px;
+            line-height: 2.5;
+
+            
+        }
+        .list a{
+            /* border: 2px solid red; */
+           margin: 10px;
+           line-height: 4;
+           font-size: larger;
+           font-weight: 600;
+           color: white;
+
+        }
+        .icone{
+            /* border: 2px solid red; */
+            line-height: 5;
+        }
+        .icone i{
+            margin:0.5rem;
+            font-size:1.5rem;
+        }
+        .list a:hover{
+            /* height: 150px;
+            width: 3rem; */
+            border: 1px solid white;
+            color:rgb(170, 170, 22);
+        }
+        .container1{
+            /* border: 2px solid red; */
+            height: 600px;
+            /* background-color: rgba(255, 255, 0, 0.105); */
+            
+            
+        }
+        .container1 img{
+            border: 2px solid gry;
+            height: 530px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width:80rem;
+            margin-left: 9rem; 
+             margin-right: 4rem; 
+             margin-top: 6.5rem; 
+             /* margin-bottom: 4rem; */
+
+
+        }
+   
+        .container1 h1{
+            /* border: 2px solid red; */
+            /* background-color:rgba(153, 205, 50, 0.304);  */
+            width: 50px;
+            display: flex;
+            margin-left: 10rem;
+            margin-top:-31rem;
+            font-size: 4rem;
+            color: white;
+
+            
+        }
+        .container1 h2{
+            /* border: 2px solid red; */
+            height: 3rem;
+            margin-top: 11rem;
+           margin-bottom: 2rem;
+            text-align: center;
+            font-size: 45px;
+            background-color: rgba(218, 165, 32, 0.923);
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .Search_btn{
+            /* border: 2px solid red; */
+            margin-left: 15rem;
+            /* margin-top:-2rem; */
+            height: 4rem;
+            width: 13rem;
+            font-size: 1.5rem;
+            color:black;
+            background-color:darkkhaki;
+            border: none;
+        }
+        .Search_btn:hover{
+            height: 4rem;
+            width: 13rem;
+            background-color: rgba(227, 227, 17, 0.999);
+        }
+        .containt{
+            /* background-color: rgba(153, 205, 50, 0.304); */
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            flex-wrap: wrap;
+            margin: 2rem;
+            margin-top: 12rem;
+            z-index: -1;
+            height: 50rem;
+        }
+     
+        .containt img{
+            border: 2px solid gray;
+            height: 15rem;
+            width: 19rem;
+            position: relative;
+            transition: all .3s linear;
+        }
+     
+     
+        .containt p{
+            border: 2px solid gray;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1rem;
+            margin: 0.2rem;
+            background-color: yellow;
+            height: 3.5rem;
+            width:5.5wh;
+        }
+    
+        .explore{
+            margin-top: 5rem;
+            display: flex;
+            justify-content: space-evenly;
+            /* border-radius: 50%; */
+            
+        }
+        .explore img{
+            border-radius: 50%;
+            height:12rem;
+            width: 12rem;
+            border: 2px solid gray;
+            margin: 1rem;
+
+        }
+        h3{
+            /* border: 2px solid red; */
+            font-size: 5rem;
+            font-weight: 900;
+            margin-top: -5rem;
+            /* margin-left: 6rem; */
+            text-align: center;
+            color: navy;
+        }
+        h3:hover{
+            color: gray;
+        }
+        .pera{
+            /* border: 2px solid red; */
+            margin-top: 1rem; 
+             /* position: relative;  */
+             margin-bottom: 3rem; 
+            /* height: 2rem; */
+            /* width: 8rem; */
+            font-size: larger;
+            font-weight: 800;
+            text-align: center;
+            color: navy;
+        }
+        .pera:hover{
+            color: gray;
+        }
+         .last{
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: space-between;
+            height: 42rem;
+            /* flex-direction:row; */
+
+        } 
+        .last a:hover{
+         color:rgb(122, 122, 69);
+        }
+        .last img{
+            height: 40rem;
+            width: 50rem;
+            border: 2px solid gray;
+        }
+        .last h5{
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 1rem;
+            margin-left: 1.5rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 800;
+            display: flex; 
+            justify-content: center; 
+              /* margin-top :5rem; */
+             /* margin-left: 4rem; */
+
+        }
+        .last h5:hover{
+            color: navy;
+        }
+        
+       .last_h{
+        /* border: 2px solid red; */
+        font-size: 3rem;
+        margin-left: -11rem;
+        margin-top: 5rem;
+        color: gray;
+        text-align: center;
+       }
+       .last-p{
+         /* border: 2px solid red; */
+         margin-top: 10rem;
+         margin-left: 1rem;
+         font-size: 20px;
+         word-spacing: 1rem;
+         text-align: center;
+         /* background-color: yellowgreen; */
+         color: rgb(110, 110, 35);
+
+       }
+       
+       .footer-img{
+            border: 2px solid gray;;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        
+        .box{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 1.5rem;
+            margin-top: 2rem;
+            z-index: -1;
+            /* height: 40rem; */
+           
+        }
+        .box img{
+            border: 3px solid gray;
+            height: 15rem;
+            border-bottom: none;
+            width: 19rem;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        .button-p{
+            border: 2px solid gray;
+            margin-top: 15rem;
+            border-top: none;
+            /* margin-right:-30rem; */
+            margin-left:-19rem;
+            /* margin-top:5px; */
+            height: 3.5rem;
+            width:19rem ;
+            text-align: center;
+            line-height: 2.5;
+            font-size: larger;
+            font-weight: 500;
+            background-color: rgba(255, 255, 0, 0.318);
+            
+        }
+        .footer-section{
+            border: 2px solid gray;
+            height: 250px;
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.334);
+            
+        }
+        .footer-section h1{
+            /* border: 2px solid red; */
+            margin-top: 1rem;
+            font-size: 5rem;
+            
+        }
+        .footer-section input{
+            /* border: 1px solid red; */
+            border: none;
+            margin-top: 3.5rem;
+            height: 3.5rem;
+            width: 35rem;
+            font-size: 1.5rem;
+            border-radius: 10000px;
+            padding:15px;
+            border-bottom: 3px solid purple;
+            outline: transparent;
+
+            
+        }
+        .logo i{
+            display: none;
+        }
+        @media screen and (max-width:600px) {
+            .logo i{
+                display: block;
+            }
+            .list{
+
+                background-color: rgb(240, 3, 3);
+                position: absolute;
+                /* color: green; */
+                top: 3.5rem;
+                left: 0;
+                right: 0;
+                bottom:0;
+                text-align: center;
+                display: none;
+                flex-direction: column;
+            }
+            .container1 img{
+            border: 3px solid gry;
+            height:350px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width:26rem;
+            margin-left:1rem; 
+             /* margin-right:rem;  */
+             object-fit: cover;
+             position: relative;
+             /* margin-top: 6.5rem;  */
+             /* margin-bottom: 4rem; */
+
+
+        }
+        .container1 h1{
+            border: 2px solid red;
+            /* background-color:rgba(153, 205, 50, 0.304);  */
+            width:4rem;
+            height: 4rem;
+            display: flex;
+            margin-left:4rem;
+            /* margin-bottom: 2rem; */
+            margin-top:-9.5rem;
+            font-size: 2rem;
+            color:black;
+            
+
+            
+        }
+        .container1 h2{
+            border: 2px solid red;
+            margin-top:4rem;
+            height: 4rem;
+            flex-wrap: wrap;
+            width: rem;
+        }
+            }
+        
+        
+       
+   
+    </style>
+</head>
+<body>
+    <div class="nav">
+    <div class="container">
+        <div class="logo">
+             
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-solid fa-bars"></i>
+        <h1>FOOD.</h1>
+    
+        </div> 
+        <div class="list">
+            <a href="#">RECIPES</a>
+            <a href="#">POPULAR</a>
+            <a href="#">MEA T& SEAFOOD</a>
+            <a href="#">HEALTHY & DIET</a>
+            <a href="#">HOLIDAYS</a>
+            <a href="#">CUINIS</a>
+            <a href="#">SEASONAL</a>
+        </div>
+
+        <div class="icone">
+        <i class="fa-solid fa-magnifying-glass">
+
+        </i><i class="fa-solid fa-bookmark"></i>
+        <i class="fa-solid fa-phone-volume"></i>
+        </div>
+
+    </div>
+    <div class="container1">
+      
+        <img src="gleNKmxlS3KeYQaZTPFJ_0S9A7162.webp" alt="">
+        <h1>31 DELICIOUS & HEALTHY CASSEROLES</h1>
+        <button class="Search_btn">SEE THEM ALL</button>
+        
+        
+            <h2>WHAT WE'RE CREVING</h2>
+        </div>
+        <div class="containt">
+            <div class="choice1">
+                <img src="yX79JawzR3CHcGEGWh4I_0S9A5678.jpg" alt="">
+                <p>Lorem ipsum dolor sit </p>
+            </div>
+            
+            
+            <div class="choice2">
+                <img src="LoLdAamfR02FY46yIy0B_crockpot-roast-4637.jpg" alt="">
+                <p>Lorem ipsum dolor sit </p>
+            </div>
+            
+            <div class="choice3">
+                <img src="MwuCd6HpQ5mDvn4OLRkA_0S9A9886.jpg" alt="">
+                <p>Lorem ipsum dolor sit </p>
+            </div>
+            
+            
+            <div class="choice4">
+                <img src="VPeSMiYHRce4BWsyj7Nl_0S9A5582.jpg" alt="">
+                <p>Lorem ipsum dolor sit </p>
+                    </div>
+                    
+                    <div class="choice5">
+                        <img src="wBZxNua1T8yfDwbfo9Fz_0S9A9315.jpg" alt="">
+                        <p>Lorem ipsum dolor sit </p>
+                    </div>
+                    
+                    
+                    <div class="choice6">
+                        <img src="LlkHd9qlTpqOlaaYdJjy_0S9A6887.webp" alt="">
+                        <p>Lorem ipsum dolor sit </p>
+                    </div>
+                    
+                            <div class="choice7">
+                                <img src="WM8rgRclQsGroxlo7eHA_0S9A3950.webp" alt="">
+                                <p>MCDONALD SAUCE </p>
+                            </div>
+                            
+                                <div class="choice8">
+                                    <img src="fS29ttQnitOZ9fPVIvxA_0S9A5582.webp" alt="">
+                                    <p> TIKKA TOMATO MASALA </p>
+                                    </div>
+                                    
+                                </div>
+                                <h3>
+                                    Explore More!!
+                                </h3>
+                                <div class="explore">
+                                    <div class="ex">
+                                    <img src="wBZxNua1T8yfDwbfo9Fz_0S9A9315.jpg" alt="img">
+                                    <p class="pera"> garlic alfredo
+                                        Comfort Food Recipes</p>
+                                        </div>
+                                        
+                                        <div class="ex">
+                                    <img src="0ba5e633-8a82-4412-9912-3e4b021d3f36.webp" alt="img">
+                                    <p class="pera"> Jalebi
+                                        International Eats</p>
+                                    </div>
+                                    
+                                    <div class="ex"> 
+                                        <img src="1O1KC1wTKTskFlseYbws_0S9A6432.jpg" alt="img">
+                                        <p class="pera"> scrambled eggs
+                                            Breakfast & Brunch Recipes</p>
+                                        </div>
+                                        
+                                        <div class="ex">
+                                            <img src="4c90f65d-398c-462c-a165-eeca9e73aa8a.webp" alt="img">
+                                            <p class="pera">Copycat Girl Scout Cookie Recipes</p>
+                                        </div>
+                                        
+                                        <div class="ex">
+                                            <img src="b968c752-8018-429d-aa68-b0baf71a9129.webp" alt="img">
+                                            <p class="pera">
+                                                Copycat Cracker Barrel Recipes </p>
+                                            </div>
+                                            
+                                        <div class="ex">
+                                            <img src="9985d8e3-87d3-4cfc-b312-b355a6630e76.webp" alt="img">
+                                            <p class="pera">Cheesecake Factory Copycat Recipes</p>
+                                        </div>
+                                </div>
+                                <div class="last">
+                                    <img src="last.jpg" alt="img">
+                                    <h5>collection</h5>
+                                    <h1 class="last_h">Copycat Sweetgreen Salad Recipes</h1>
+                                    <p class="last-p">Remember for the rest of your days that it's a Ukrainian traditional soup. Can you Russian guys not try to steal something at least sometimes? Eat your cabbage soup and leave our borscht alone; it's still terrible when you make it, like everything else Remember for the rest of your days that it's a Ukrainian traditional soup. Can you Russian guys not try to steal something at least sometimes? Eat your cabbage soup and leave our borscht alone; it's still terrible when you make it, like everything else</p>
+                                    
+                                </div>
+
+                                <div class="last">
+                                    <img src="jaZWq4VnRbeqrr2zc2U6_garlic-bread-beauty-1.webp" alt="img">
+                                    <h5>collection</h5>
+                                    <h1 class="last_h">How to Make Garlic Bread</h1>
+                                    <p class="last-p"> Remember for the rest of your days that it's a Ukrainian traditional soup. Can you Russian guys not try to steal something at least sometimes? Eat your cabbage soup and leave our borscht alone; it's still terrible when you make it, like everything elseLooking to seriously up your garlic bread game? Try this recipe for a classic toasty loaf. It’s golden brown with crusty edges, extra-garlicky, and a little cheesy. What’s not to love?By Heather Baird</p>
+                                    
+                                </div>
+       <div class="footer-img">
+      
+        <div class="box">
+        <img src="a.png" alt="img">
+        <p class="button-p">oven-baked ribs</p>
+        </div>
+
+        <div class="box">
+            <img src="b.png" alt="img">
+            <p class="button-p">oven-baked ribs</p>
+            </div>
+        
+        
+            <div class="box">
+                <img src="c.png" alt="img">
+                <p class="button-p">oven-baked ribs</p>
+                </div>
+        
+        
+                <div class="box">
+                    <img src="d.png" alt="img">
+                    <p class="button-p">oven-baked ribs</p>
+                    </div>
+        
+        
+                    <div class="box">
+                        <img src="e.png" alt="img">
+                        <p class="button-p">oven-baked ribs</p>
+                        </div>
+        
+        
+                        <div class="box">
+                            <img src="f.png" alt="img">
+                            <p class="button-p">oven-baked ribs</p>
+                            </div>
+
+                        
+
+                                <div class="box">
+                                    <img src="k.png" alt="img">
+                                    <p class="button-p">oven-baked ribs</p>
+                                    </div>
+
+                                    <div class="box">
+                                        <img src="i.png" alt="img">
+                                        <p class="button-p">oven-baked ribs</p>
+                                        </div>
+
+                                        <div class="box">
+                                            <img src="m.png" alt="img">
+                                            <p class="button-p">oven-baked ribs</p>
+                                            </div>
+
+                                            <div class="box">
+                                                <img src="n.png" alt="img">
+                                                <p class="button-p">oven-baked ribs</p>
+                                                </div>
+
+                                                <div class="box">
+                                                    <img src="o.png" alt="img">
+                                                    <p class="button-p">oven-baked ribs</p>
+                                                    </div>
+
+                                                    <div class="box">
+                                                        <img src="q.png" alt="img">
+                                                        <p class="button-p">oven-baked ribs</p>
+                                                        </div>
+
+                                                        <div class="box">
+                                                            <img src="z.png" alt="img">
+                                                            <p class="button-p">oven-baked ribs</p>
+                                                            </div>
+
+                                                            <div class="box">
+                                                                <img src="y.png" alt="img">
+                                                                <p class="button-p">oven-baked ribs</p>
+                                                                </div>
+
+                                                                <div class="box">
+                                                                    <img src="x.png" alt="img">
+                                                                    <p class="button-p">oven-baked ribs</p>
+                                                                    </div>
+
+                                                                    <div class="box">
+                                                                        <img src="x.png" alt="img">
+                                                                        <p class="button-p">HEALTHY pizza</p>
+                                                                        </div>
+
+                                                                        
+                                                                    
+        
+
+
+
+       </div>
+
+
+
+       <div class="footer-section">
+           <h1>Find More Recipes</h1>
+           
+           
+           <input type="text " placeholder="I'm craving....">
+         
+
+       
+       </div>
+       
+    </div>
+</body>
+</html>

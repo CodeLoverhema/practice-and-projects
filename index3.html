@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        .container{
+            height: 500px;
+            width: 350px;
+            border-radius:8%;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 20px;
+            background-color: rgba(30, 25, 25, 0.701);
+        }
+        input{
+            border: 1px solid black;
+            height: 60px;
+            width: 300px;
+            
+            background-color: rgb(236, 229, 229);
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 30px;
+            margin-top: 25px;
+            border-radius: 10px;
+           margin-right: 10px;
+           margin-left: 25px;
+           font-size: 40px;
+           font-weight: 400;
+           color: black;
+          text-align: end;
+
+        }
+        .one{
+            margin-top: 10px;
+            margin-left: 25px;
+            
+        }
+      .btn{
+        border: 1px solid black;
+        height: 60px;
+        width: 60px;
+        margin: 5px;
+        align-items: center;
+        text-align: cente;
+        cursor: pointer;
+        font-size: larger;
+        font-weight: 700;
+        border-radius: 50%;
+        background-color: rgba(21, 21, 21, 0.332);
+      }
+      .btn1{
+        border: 1px solid black;
+        height: 60px;
+        width: 60px;
+        margin: 5px;
+        align-items: center;
+        text-align: cente;
+        cursor: pointer;
+        font-size: larger;
+        font-weight: 700;
+        border-radius: 50%;
+        color: rgb(0, 255, 72);
+        background-color: rgba(21, 21, 21, 0.332);
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <input type="text" placeholder="0" id="inputbox">
+<!--         
+        <div class="box1">
+ 
+        </div> -->
+        <div class="one">
+         <button class="btn1">AC</button>
+         <button class="btn1">DEL</button>
+         <button class="btn1">%</button>
+         <button class="btn1">/</button>
+        </div>
+        <div class="one">
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn1">X</button>
+           </div>
+           <div class="one">
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn1">-</button>
+           </div>
+           <div class="one">
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn1">+</button>
+           </div>
+           <div class="one">
+            <button class="btn">00</button>
+            <button class="btn">.</button>
+            <button class="btn">0</button>
+            <button class="btn1">=</button>
+           </div>
+    </div>  
+
+    <script>
+
+        let input = document.getElementById("inputbox");
+         let  buttons = document.querySelectorAll("button");
+
+        //  let cal = Array.from(buttons);
+        //  cal.forEach(buttons =>{
+        //     buttons.addEventListener("click",(e)=>{
+        //         if(e.innerHTML = "="){
+        //             cal = eval(cal);
+        //             input.value = cal
+
+        //         }
+        //         else( e.target.innerHTML == "AC"){
+        //             input.value = cal
+        //         }
+
+        //     })
+        //  })
+
+        //  console.log(cal)
+
+         let string = "";
+         let arr = Array.from(buttons);
+         arr.forEach(button =>{
+            button.addEventListener("click",(e)=>{
+             if (e.target.innerHTML == "="){
+                string = eval(string);
+                input.value = string
+             }
+
+             else if(e.target.innerHTML == 'AC'){
+                string = "";
+                input.value = string;
+             }
+             else if(e.target.innerHTML == "DEL"){
+                string = string.substring(0, string.length-1);
+                input.value = string;
+             }
+             else{
+                 string += e.target.innerHTML;
+                 input.value = string;
+
+             }
+
+
+            })
+         })
+  
+         
+    </script>
+</body>
+</html>

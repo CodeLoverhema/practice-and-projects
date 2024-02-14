@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>game</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        h1{
+            background-color: #081b31;
+            color: white;
+            height: 5rem;
+            text-align: center;
+            line-height: 5rem;
+        }
+        .choice{
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .choice:hover{
+            /* opacity: 0.5; */
+            cursor: pointer;
+            background-color: #081b31;
+        }
+        img{
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+
+        }
+        .choices{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5em;
+            margin-top: 4.5rem;
+        }
+        .score-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            gap: 3rem;
+
+        }
+        #user-score,#comp-score{
+            font-size: 4rem;
+            
+        }
+        .mage-container{
+            margin-top: 3rem;
+            margin-left: 15.3rem;
+            position: absolute;
+          
+            
+        }
+        #msg{
+            background-color: #081b31;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            display: inline;
+            padding: 1rem;
+            border-radius:6%;
+           
+            
+        }
+    </style>
+</head>
+<body>
+    <h1> Rock Pepar Scissors</h1>
+
+    <div class="choices">
+    <div class="choice" id="rock">
+        <img src="rock.png" >
+    </div>
+     
+    <div class="choice" id="paper">
+        <img src="paper.png" >
+    </div>
+
+
+
+    <div class="choice">
+        <img src="scissors.png" id="scissors">
+    </div>
+    </div>
+
+
+    <div class="score-box">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="comp-score">0</p>
+            <p>comp</p>
+        </div>
+    </div>
+
+
+    <div class="mage-container">
+        <p id="msg">play your move</p>
+
+    </div>
+
+    <script>
+
+        let userScore = 0;
+        let compscore =0;
+      
+          const choices = document.querySelectorAll(".choices");
+
+          choices.forEach((choice)=>{
+            choice.addEventListener("click",()=>{
+                const choiceId =  choice.getAttribute("id");
+                console.log("choice was clicked",choiceId);
+            })
+          })
+
+
+
+        // const playGame = (userChoice)
+    </script>
+
+</body>
+</html>

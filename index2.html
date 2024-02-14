@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+        body{
+            background-color: rgb(226, 205, 205);
+        }
+        .nav{
+            /* border: 2px solid blue; */
+            height: 80px;
+            margin: 10px;
+            align-items: center;
+            background: rgb(191, 172, 89);
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 30px;
+            font-weight: 900;
+        }
+        .main{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .score{
+            /* border: 2px solid red; */
+           height: 65px;
+           width: 140px;
+           background-color: rgb(116, 106, 106);
+           line-height: 2.3;
+           text-align: center;
+        }
+        .resetGame{
+            height: 65px;
+           width: 190px;
+           background-color: rgb(116, 106, 106);
+           line-height: 2.3;
+           text-align: center;
+        }
+        .chance{
+            height: 65px;
+           width: 250px;
+           background-color: rgb(116, 106, 106);
+           line-height: 2.3;
+           text-align: center;
+        }
+        .box{
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            background-color:gray ;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 6px;
+            padding: 5px;
+            text-align: center;
+        }
+        .box p{
+            color: white;
+            font-size: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <p class="score">Score: <span id="score">0</span></p>
+        <p class="resetGame">ResetGame</p>
+        <p class="chance">Chance Left : <span id="chance">10</span></p>
+    </div>
+    <div class="main">
+
+    </div>
+
+    <script>
+
+        let score =  document.querySelector("#score");
+        let chance =  document.querySelector("#chance");
+        let chanceLeft = parseInt(chance.innerHTML);
+        let main = document.querySelector(".main");
+
+        for(let i=1; i<=100; i++){
+            let random = Math.ceil(Math.random()*100);
+            let data = `
+            <div class="box">
+                <p>${random}</p>
+                </div>`;
+
+                main.insertAdjacentHTML("afterbegin",data);
+        }
+        let sum=0;
+        let click =0;
+        Array.from(main.children).forEach((element)=>{
+            element.addEventListener('click',()=>{
+                click+=1;
+
+                if(click<=10){
+                    sum+= parseInt(Array.from(element.children)[0].innerHTML)
+                    Array.from(element.children)[0].style.display = "block"
+                      
+
+
+                    score.innerHTML = sum
+                    chance.innerHTML = (chanceLeft- click)
+                }
+                else{
+                    alert("Game Over")
+                }
+            })
+        })
+        document.querySelector(".resetGame").addEventListener('click',()=>{
+            location.reload();
+        })
+
+    </script>
+</body>
+</html>
